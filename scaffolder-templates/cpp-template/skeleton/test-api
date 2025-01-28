@@ -1,6 +1,6 @@
 #!/bin/sh
 
-url="http://localhost:8080"
+url="https://my-cpp-app-dev-my-cpp-app-dev.apps.cluster-9xl8s.9xl8s.sandbox2979.opentlc.com"
 
 while true; do
   response=$(curl -s "$url")
