@@ -1,0 +1,15 @@
+#!/bin/sh
+
+url="http://localhost:8080"
+
+while true; do
+  response=$(curl -s "$url")
+  if [ $? -eq 0 ]; then 
+    echo "API call successful!"
+    echo "Response: $response" 
+  else
+    echo "Error: Failed to reach API. Retrying in 1 second..."
+  fi
+  sleep 1
+done
+

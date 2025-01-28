@@ -1,0 +1,11 @@
+FROM redhat/ubi8
+
+RUN yum install -y gcc-c++ 
+
+WORKDIR /app
+
+COPY src/hello_world.cpp . 
+
+RUN g++ -o hello_world hello_world.cpp
+
+CMD ["./hello_world"]
